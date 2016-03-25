@@ -77,7 +77,7 @@ else
 				'X-Mailer:PHP/'.phpversion();
 	
 		// envoyer une copie au visiteur ?
-		if ($copie == 'oui')
+		if ($copie === 'oui')
 		{
 			$cible = $destinataire.','.$email;
 		}
@@ -112,4 +112,3 @@ else
 		echo '<p>'.$message_formulaire_invalide.' <a href="contact.php">Retour au formulaire</a></p>'."\n";
 	};
 }; // fin du if (!isset($_POST['envoi']))
-?>

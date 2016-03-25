@@ -9,7 +9,7 @@
             <p>Mon texte</p>
 
             <p>
-                <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">Bouton !!
+                <a class="btn btn-lg btn-primary" href="http://timburton.fr/" role="button">Bouton !!
                     &raquo;</a>
             </p>
         </div>

@@ -21,6 +21,11 @@ $routes = [
         'controller' => 'HomeController',
         'action'     => 'contactAction',
     ],
+    'contactSubmit'         => [
+        'url'        => '/contact-submit',
+        'controller' => 'HomeController',
+        'action'     => 'contactSubmitAction',
+    ],
     'delete'      => [
         'url'        => '/delete',
         'controller' => 'HomeController',

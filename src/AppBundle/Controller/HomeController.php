@@ -79,6 +79,22 @@ class HomeController extends Controller
             'id' => $request->get('id'),
         ]);
     }
+    public function contactSubmitAction()
+    {
+  
+        $request = $this->getRequest();
+
+        $headers = 'From: loic.seguin.selectra@gmail.com' . "\r\n" .
+        'Reply-To: loic.seguin.selectra@gmail.com' . "\r\n" .
+        'X-Mailer: PHP/' . phpversion();
+        
+        if (mail($request->get('nom'),$request->get('email'),$request->get('objet'),$request->get('message'),$headers)){
+            echo "Le message a bien été envoyé !";
+            
+        } else {
+            echo "Le message n'a pas pu être envoyé !";
+        }
+    }
 
 //    public function contactAction()
 //    {

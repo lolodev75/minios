@@ -1,19 +1,14 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7" lang="fr"> <![endif]-->
-<!--[if IE 7]>         <html class="lt-ie9 lt-ie8 is-ie-7" lang="fr"> <![endif]-->
-<!--[if IE 8]>         <html class="lt-ie9 is-ie8" lang="fr"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="fr"> <!--<![endif]-->
-<head>
-		<title>Minios</title>
-		<meta charset="UTF-8" />
-</head>
-<body>
-<form id="contact" method="post" action="traitement_formulaire.php">
+<?php include __DIR__ . '/../top.php'; ?>
+
+<div class="container">
+    <div class="col-md-12">
+
+<form id="contact" method="post" action="<?php echo $path('contactSubmit')?>">
 	<fieldset><legend>Vos coordonnées</legend>
 		<p><label for="nom">Nom :</label>
 			<input type="text" id="nom" name="nom" tabindex="1" /></p>
 		<p><label for="prenom">Prénom :</label>
-			<input type="text" id="prennom" name="prenom" tabindex="1" /></p>
+			<input type="text" id="prenom" name="prenom" tabindex="1" /></p>
 		<p><label for="email">Email :</label>
 			<input type="text" id="email" name="email" tabindex="2" /></p>
 	</fieldset>
@@ -27,8 +22,8 @@
  
 	<div style="text-align:center;">
 		<input type="submit" name="envoi" value="Envoyer le formulaire !" />
-                <? php mail_to loic.seguin.selectra@gmail.com ?>
+                 
 	</div>
 </form>
-</body>
-</html>
+        
+<?php include __DIR__ . '/../bottom.php'; ?>
